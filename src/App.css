@@ -1,0 +1,59 @@
+#root {
+  min-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.netflix-brand {
+  color: red;
+  font-family: "Bokor", system-ui;
+  font-size: 40px;
+}
+
+.netflix-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.navbar-links {
+  text-decoration: none;
+  margin: 5px 15px;
+}
+
+.navbar-icons {
+  display: flex-end;
+  margin-left: 400px;
+  align-items: center;
+}
+
+.card-heading {
+  font-weight: bold;
+  text-align: start;
+}
+
+.movie-img {
+  width: 250px;
+  height: 300px;
+}
+
+.profile-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.fa {
+  margin-right: 40px;
+  margin-top: 10px;
+  font-size: 30px !important;
+}
