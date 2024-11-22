@@ -25,7 +25,7 @@
   align-items: center;
 }
 
-.navbar-links {
+.navbar-link {
   text-decoration: none;
   margin: 5px 15px;
 }
@@ -52,8 +52,8 @@
   border-radius: 40px;
 }
 
-.fa {
+.fa-podcast,
+.fa-search {
   margin-right: 40px;
-  margin-top: 10px;
   font-size: 30px !important;
 }

@@ -6,33 +6,33 @@ import movie4 from "../assets/movie4.png";
 import movie5 from "../assets/movie5.png";
 import movie6 from "../assets/movie6.png";
 import movie7 from "../assets/movie7.png";
-import movieD from "../assets/movieD.png";
-import movieE from "../assets/movieE.png";
-import movieF from "../assets/movieF.png";
 import movie8 from "../assets/movie8.png";
 import movie9 from "../assets/movie9.png";
-import ImageTag from "./ImageTag";
+import movie10 from "../assets/movie10.png";
+import movie11 from "../assets/movie11.png";
+import movie12 from "../assets/movie12.png";
+import Image from "./Image";
 
-function MoviesCard() {
+function Movies() {
   const trendingMovies = [movie1, movie2, movie3, movie4, movie5, movie6];
-  const LatestMovies = [movieD, movieE, movieF, movie7, movie8, movie9];
+  const latestMovies = [movie10, movie11, movie12, movie7, movie8, movie9];
 
   return (
     <div className="movies-container">
       <div className="movie-card">
-        <Heading title="Trending Movies" styleclass="card-heading" />
+        <Heading title="Trending Movies" className="card-heading" />
         {trendingMovies.map((movie, index) => (
-          <ImageTag key={index} img={movie} styleclass="movie-img" />
+          <Image key={index} src={movie} className="movie-img" />
         ))}
       </div>
       <div className="movie-card">
-        <Heading title="New Releases" styleclass="card-heading" />
-        {LatestMovies.map((movie, index) => (
-          <ImageTag key={index} img={movie} styleclass="movie-img" />
+        <Heading title="New Releases" className="card-heading" />
+        {latestMovies.map((movie, index) => (
+          <Image key={index} src={movie} className="movie-img" />
         ))}
       </div>
     </div>
   );
 }
 
-export default MoviesCard;
+export default Movies;

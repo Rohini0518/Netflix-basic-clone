@@ -1,29 +1,30 @@
 import { NavLink } from "react-router-dom";
-import netflixlogo from "../assets/netflixlogo.jpeg";
-import profileimg from "../assets/profileimg.png";
-import ImageTag from "./ImageTag";
+import netflixLogo from "../assets/netflixLogo.jpeg";
+import profileImg from "../assets/profileImg.png";
+import Image from "./Image";
+import Icon from "./Icon";
 
 function NavBar() {
-  const NavTitles = [
-    { src: "/TvShows", title: "Tv Shows" },
-    { src: "/Features", title: "Features" },
-    { src: "/RecentlyAdded", title: "RecentlyAdded" },
-    { src: "/MyList", title: "MyList" },
+  const navTitles = [
+    { path: "/tvShows", title: "Tv Shows" },
+    { path: "/features", title: "Features" },
+    { path: "/recently-Added", title: "RecentlyAdded" },
+    { path: "/myList", title: "MyList" },
   ];
   return (
     <div className="navbar-container">
       <div>
-        <ImageTag img={netflixlogo} styleclass="netflix-logo" />
-        {NavTitles.map((navbar, index) => (
-          <NavLink to={navbar.src} key={index} className="navbar-links">
+        <Image src={netflixLogo} className="netflix-logo" />
+        {navTitles.map((navbar, index) => (
+          <NavLink to={navbar.path} key={index} className="navbar-link">
             {navbar.title}
           </NavLink>
         ))}
       </div>
       <div className="navbar-icons">
-        <i className="fa fa-podcast" aria-hidden="true" />
-        <i className="fa fa-search" aria-hidden="true" />
-        <ImageTag img={profileimg} styleclass="profile-logo" />
+        <Icon className="fa fa-podcast" />
+        <Icon className="fa fa-search" />
+        <Image src={profileImg} className="profile-logo" />
       </div>
     </div>
   );
